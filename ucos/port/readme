@@ -1,0 +1,10 @@
+Steps to use sample program for the Linux port with uCOS-II v2.86.
+------------------------------------------------------------------
+
+Downloaded v2.86 from the Micrium website and extract the contents. Within the ..SOFTWARE/uCOS-II/Source folder, do the following:
+
+1) Rename os_cfg_r.h to os_cfg.h and set OS_DEBUG_EN=0, OS_TMR_EN=0
+2) Create an empty file called app_cfg.h
+3) Copy the linux port files ( os_cpu_c.c, os_cpu.h, sample.c, makefile ) into the Source folder.
+4) Type make ( if this doesn't work you may be missing GNU gcc or the pthreads library ).
+5) run ./sample
